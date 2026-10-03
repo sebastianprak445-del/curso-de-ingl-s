@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curso de Inglés para Principiantes | Aprende desde cero y sin miedo</title>
+<meta name="description" content="Aprende inglés desde cero y sin miedo. Curso práctico diseñado para llevarte paso a paso hasta la confianza para comunicarte.">
+<style>
+:root{
+  --blue:#1769e0;
+  --blue-dark:#0f4cb3;
+  --dark:#10213b;
+  --light:#f5f9ff;
+  --red:#e63946;
+  --green:#2ec4b6;
+  --text:#26364d;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:var(--light);
+  line-height:1.6;
+}
+.container{width:min(1080px,92%);margin:auto}
+
+/* Navigation */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.95);
+  border-bottom:1px solid #e6edf7;
+  backdrop-filter:blur(10px);
+}
+.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;color:var(--dark);font-size:20px;text-decoration:none}
+.logo span{color:var(--blue)}
+.nav-btn{
+  text-decoration:none;background:var(--blue);color:white;
+  padding:11px 22px;border-radius:999px;font-weight:800;font-size:14px;
+  transition:all 0.2s ease;
+}
+.nav-btn:hover{background:var(--blue-dark);transform:translateY(-1px)}
+
+/* Hero Section */
+.hero{
+  padding:60px 0 55px;
+  background:linear-gradient(135deg,#edf5ff 0%,#fff 55%,#fff2f3 100%);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+.badge{
+  display:inline-block;background:#e4efff;color:var(--blue);
+  padding:8px 16px;border-radius:999px;font-weight:800;font-size:13px;
+  letter-spacing:0.5px;
+}
+h1{font-size:clamp(36px,5vw,56px);line-height:1.08;margin:18px 0;color:var(--dark);font-weight:900}
+h1 span{color:var(--blue)}
+.hero p{font-size:19px;line-height:1.6;max-width:650px;color:#3e4d63}
+.cta{
+  display:inline-block;margin-top:14px;padding:18px 32px;border-radius:14px;
+  background:var(--blue);color:white;text-decoration:none;font-weight:900;
+  font-size:17px;
+  box-shadow:0 10px 25px rgba(23,105,224,.28);
+  transition:all 0.2s ease;
+  text-align:center;
+}
+.cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(23,105,224,.35);background:var(--blue-dark)}
+.note{font-size:14px!important;color:#5a6e85;margin-top:14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+
+/* Side Card */
+.card{
+  background:white;border:1px solid #e4ebf5;border-radius:24px;
+  padding:32px;box-shadow:0 20px 50px rgba(31,65,114,.1)
+}
+.emoji{font-size:48px;text-align:center;margin-bottom:12px}
+.level{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:1px;text-transform:uppercase;text-align:center}
+.card h2{color:var(--dark);margin:6px 0 18px;font-size:22px;text-align:center}
+.list{list-style:none;padding:0;margin:0}
+.list li{padding:12px 0;border-bottom:1px solid #edf1f7;display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#334155}
+.list li:last-child{border-bottom:0}
+.list li span.check{color:#10b981;font-weight:bold;font-size:16px}
+
+/* Sections */
+section{padding:72px 0}
+.section-title{text-align:center;max-width:720px;margin:0 auto 48px}
+.section-title h2{font-size:36px;color:var(--dark);margin:0 0 12px;font-weight:800}
+.section-title p{font-size:18px;color:#52647c;margin:0}
+
+/* Grid & Cards */
+.grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.feature-card{
+  background:white;padding:30px;border-radius:20px;border:1px solid #e6edf7;
+  box-shadow:0 4px 15px rgba(0,0,0,.02);
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+.feature-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(23,105,224,.08)}
+.icon-box{
+  width:50px;height:50px;border-radius:14px;background:#edf5ff;
+  display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;
+}
+.feature-card h3{color:var(--dark);margin:0 0 10px;font-size:20px}
+.feature-card p{line-height:1.6;margin:0;color:#475569;font-size:15px}
+
+/* Methodology */
+.methodology{background:white;border-top:1px solid #eef4fc;border-bottom:1px solid #eef4fc}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.step{background:#f8fbff;border-radius:20px;padding:28px;border:1px solid #dfeafa}
+.number-badge{
+  width:42px;height:42px;border-radius:12px;background:var(--blue);color:white;
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;margin-bottom:16px;
+}
+.step h3{color:var(--dark);margin:0 0 10px;font-size:19px}
+.step p{color:#475569;margin:0;font-size:15px;line-height:1.55}
+
+/* Final CTA Section */
+.final{
+  background:linear-gradient(135deg,var(--dark) 0%,#164282 100%);
+  color:white;text-align:center;padding:80px 20px;
+}
+.final h2{font-size:clamp(32px,4vw,44px);margin:0 0 16px;font-weight:900}
+.final p.sub{font-size:19px;opacity:.92;max-width:680px;margin:0 auto 30px}
+.price-box{
+  background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);
+  padding:24px 32px;border-radius:20px;display:inline-block;margin-bottom:30px;
+  backdrop-filter:blur(5px);
+}
+.price-main{font-size:36px;font-weight:900;color:#fff;margin:0}
+.price-sub{font-size:15px;opacity:.85;margin:6px 0 0}
+.final .cta{background:white;color:var(--blue);box-shadow:0 10px 30px rgba(0,0,0,0.2);margin-top:0}
+.final .cta:hover{background:#f0f6ff;color:var(--blue-dark)}
+.trust-footer{margin-top:20px;font-size:14px;opacity:0.8}
+
+/* Footer */
+footer{padding:30px;text-align:center;font-size:14px;color:#64748b;background:#fff;border-top:1px solid #e6edf7}
+
+@media(max-width:850px){
+  .hero-grid,.steps,.grid-4{grid-template-columns:1fr}
+  .hero{padding:40px 0 30px}
+  section{padding:50px 0}
+  .hero p{font-size:17px}
+  .cta{width:100%}
+  .price-main{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="logo">🇬🇧 Inglés <span>Desde Cero</span></a>
+    <a class="nav-btn" href="#curso">Inscribirme ahora</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">🇬🇧 CURSO PARA PRINCIPIANTES</span>
+      <h1>¡Comienza a hablar inglés <span>desde cero y sin miedo!</span></h1>
+      <p>
+        Un curso diseñado especialmente para llevarte paso a paso, desde tus primeras palabras hasta la confianza necesaria para comunicarte con seguridad en situaciones cotidianas.
+      </p>
+      <a class="cta" href="https://go.hotmart.com/N107854384F" target="_blank" rel="noopener noreferrer">🚀 QUIERO APRENDER INGLÉS</a>
+      <div class="note">
+        <span>🛡️ Garantía de 7 días</span>
+        <span>•</span>
+        <span>📱 Acceso en celular o computadora</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🎯</div>
+      <div class="level">¿Para quién es este curso?</div>
+      <h2>Este curso es perfecto para ti si...</h2>
+      <ul class="list">
+        <li><span class="check">✓</span> Partes desde <strong>absoluto cero</strong> o estudiaste hace tiempo y necesitas repasar las bases.</li>
+        <li><span class="check">✓</span> Buscas abrir <strong>nuevas puertas laborales</strong> y mejorar tu perfil profesional.</li>
+        <li><span class="check">✓</span> Deseas <strong>viajar con mayor seguridad</strong> sin depender de traductores.</li>
+        <li><span class="check">✓</span> Quieres disfrutar de películas, series y contenido en inglés <strong>sin subtítulos</strong>.</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<section class="methodology">
+  <div class="container">
+    <div class="section-title">
+      <h2>Aprende con una metodología 100% práctica</h2>
+      <p>Olvídate de memorizar reglas muertas: aquí el objetivo es entender, practicar y hablar.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="number-badge">1</div>
+        <h3>Explicaciones claras</h3>
+        <p>Conceptos sencillos de entender desde el primer momento, sin tecnicismos innecesarios ni enredos gramaticales.</p>
+      </div>
+      <div class="step">
+        <div class="number-badge">2</div>
+        <h3>Ejemplos reales</h3>
+        <p>Aprenderás con situaciones cotidianas para que puedas aplicar tu inglés en el trabajo, viajes y eventos sociales.</p>
+      </div>
+      <div class="step">
+        <div class="number-badge">3</div>
+        <h3>A tu propio ritmo</h3>
+        <p>Ejercicios interactivos que se adaptan a tu horario. Estudia cuándo y dónde quieras, desde tu celular o computadora.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="curso">
+  <div class="container">
+    <div class="section-title">
+      <h2>Lo que aprenderás en el curso</h2>
+      <p>Una ruta estructurada paso a paso para darte la base y seguridad que necesitas.</p>
+    </div>
+
+    <div class="grid-4">
+      <div class="feature-card">
+        <div class="icon-box">💬</div>
+        <h3>1. Fundamentos esenciales</h3>
+        <p>Saludos, presentaciones, números, días de la semana y el vocabulario básico indispensable más utilizado en el día a día.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box">🧩</div>
+        <h3>2. Gramática práctica y sencilla</h3>
+        <p>El uso correcto del verbo <em>to be</em>, los tiempos verbales principales (presente y pasado simple) y la estructura de oraciones sin enredos técnicos.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box">🗣️</div>
+        <h3>3. Conversación real</h3>
+        <p>Frases hechas y expresiones útiles (<em>chunks</em>) para desenvolverte en tiendas, viajes, restaurantes y al conocer nuevas personas.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box">🎧</div>
+        <h3>4. Comprensión y pronunciación</h3>
+        <p>Claves para entender cuando te hablan y mejorar tu acento de forma natural desde el primer día.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container">
+    <h2>🚀 Empieza hoy tu camino con el inglés</h2>
+    <p class="sub">Aprovecha esta oportunidad de hablar inglés desde cero con una guía clara y a tu ritmo.</p>
+    
+    <div class="price-box">
+      <div class="price-main">$ 207.042,00</div>
+      <div class="price-sub">o hasta en 12x de $ 17.253,00 con tarjeta</div>
+    </div>
+    
+    <div>
+      <a class="cta" href="https://go.hotmart.com/N107854384F" target="_blank" rel="noopener noreferrer">
+        QUIERO INSCRIBIRME AHORA →
+      </a>
+    </div>
+
+    <div class="trust-footer">
+      🔒 Pago 100% seguro procesado por Hotmart • 🛡️ 7 días de garantía sin riesgos<br>
+      <small style="opacity:0.8;">Por Juan de Dios Sánchez Fernández</small>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Inglés Desde Cero · Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
